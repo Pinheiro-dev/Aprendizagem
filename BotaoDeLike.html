@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão de Like - Contador</title>
+
+</head>
+<style>
+    html {
+        background-color: dimGray;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button {
+
+        background-image: url(https://i.pinimg.com/originals/3f/fe/de/3ffedec79de99c28a94f1b865f3a579b.gif);
+        color: blueViolet;
+        background-size: 100px;
+        background-position: -15px 55%;
+        background-repeat: no-repeat;
+        width: 175px;
+        height: 59px;
+        font-size: 20px;
+        border: 3px solid black;
+        text-align: center;
+        text-indent: 40px;
+    }
+</style>
+
+<body>
+    <button id="botaoLike" onclick="clicou()">0 Curtidas </button>
+    <script>
+        quantidadeLikes = 0
+        function clicou() {
+            quantidadeLikes = quantidadeLikes + 1
+            if (quantidadeLikes == 1) {
+                botaoLike.innerHTML = quantidadeLikes + " Curtida"
+            } else {
+                botaoLike.innerHTML = quantidadeLikes + " Curtidas"
+            }
+
+        }
+    </script>
+</body>
+
+</html>
